@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link href="/skin/css/css.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/skin/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.unobtrusive-ajax.min.js"></script>
+<script type="text/javascript" src="/skin/js/easy_slider.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.caroufredsel-6.0.4-packed.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.imagezoom.min.js"></script>
+</head>
+<body>
+<div id="header"> {dede:include filename="head.htm"/}
+  <div id="nav">
+    <div id="navMenu">
+      <ul>
+         <li><a href="/">网站首页</a></li>
+       {dede:channel type='top' row='7' currentstyle="<li class='home'><a  href='~typelink~' ~rel~>~typename~</a></li>"}
+        <li><a href="[field:typelink/]"  rel='dropmenu'>[field:typename/]</a></li>
+       {/dede:channel}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="article_article MB10"></div>
+<div class="ncon">
+  <div class="nconr">
+    <div class="weizhi">
+      <h2>{dede:field name='typename'/}</h2>
+      <h3>当前位置：{dede:field name='position'/}</h3>
+    </div>
+    <div class="title">
+      <h1>{dede:field.title/}</h1>
+    </div>
+    <div class="resource" style="height:0"></div>
+    <div class="proarc">
+      <div class="show_gallery">
+        <div class="gallery_box"> {dede:field name='imgurls' alt='图片输出区'}
+          <div class="tb-booth tb-pic tb-s310"> <a href="[field:imgsrc/]" target="_blank"><img src="[field:imgsrc/]" rel="[field:imgsrc/]" class="jqzoom" width="400"  /></a> </div>
+          {/dede:field}
+          <ul class="tb-thumb" id="thumblist">
+            {dede:productimagelist}
+            <li class=tb-selected>
+              <div class="tb-pic"> <a title="[field:text/]" href="[field:imgsrc/]"> <img src="[field:imgsrc/]" mid="[field:imgsrc/]" big="[field:imgsrc/]" width="70" height="70" /></a> </div>
+            </li>
+            {/dede:productimagelist}
+          </ul>
+        </div>
+      </div>
+      <script type="text/javascript">
+    $(document).ready(function () {
+        $(".jqzoom").imagezoom();
+        $("#thumblist li a").mouseover(function () {
+            $(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+            $(".jqzoom").attr('src', $(this).find("img").attr("mid"));
+            $(".jqzoom").attr('rel', $(this).find("img").attr("big"));
+        });
+        $("#thumblist2 li a").click(function () {
+            $(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+            $(".jqzoom").attr('src', $(this).find("img").attr("mid"));
+            $(".jqzoom").attr('rel', $(this).find("img").attr("big"));
+        });
+        $("#thumblist3 li a").click(function () {
+            $(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+            $(".jqzoom").attr('src', $(this).find("img").attr("mid"));
+            $(".jqzoom").attr('rel', $(this).find("img").attr("big"));
+        });
+    });
+</script>
+      <div class="show_property">
+        <h1>{dede:field.title/}</h1>
+        <p><s>原价￥{dede:field.yj/} 元</s></p>
+        <p class="zx_price">价&nbsp;&nbsp;格：<b></b><strong>{dede:field.jj/}</strong>元</p>
+        <p>型&nbsp;&nbsp;号：{dede:field.hh/}</p>
+        <p>规&nbsp;&nbsp;格：{dede:field.cc/}</p>
+        <div class="choose_style">
+          <div class="choose_body">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <!-- <tr>
+              <td width="70">购买数量：</td>
+              <td><input id="add2" name="" type="button" value="" class="add_num"/>
+                <input id="text_box2"  type="text" value="1" class="num_box"/>
+                <input id="min2" name="" type="button" value="" class="min_num"/></td>
+            </tr> -->
+              <tr>
+                <td colspan="2" class="btnbar"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={dede:global.cfg_qq/}&site=qq&menu=yes" class="buybtn"><img src="/skin/images/buybtn.jpg" width="132" height="50" /></a> {dede:type typeid='36'} <a target="_blank" href="[field:typelink/]"> <img src="/skin/images/addshoping.jpg" width="132" height="50"/> </a>{/dede:type} </td>
+              </tr>
+            </table>
+            <div class="clear"></div>
+          </div>
+          <script type="text/javascript">
+    $(".choose_style").viTab({
+        tabTime: 4000,
+        tabScroll: 0,
+        tabEvent: 0
+    });
+</script> 
+        </div>
+        <div class="share"> 
+          <!-- Baidu Button BEGIN -->
+          <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare"> <span class="bds_more">分享到：</span> <a class="bds_qzone"></a> <a class="bds_tsina"></a> <a class="bds_tqq"></a> <a class="bds_renren"></a> <a class="bds_t163"></a> <a class="shareCount"></a> </div>
+          <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" ></script> 
+          <script type="text/javascript" id="bdshell_js"></script> 
+          <script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3603260)
+</script> 
+          <!-- Baidu Button END --> 
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="show_content">
+        <h3> <span class="current">商品详情</span><span>在线留言</span></h3>
+        <div class="content_box"  style="display:block"> <br />
+          <div class="content_body">
+            <p>{dede:field.body/} </p>
+          </div>
+          <div class="correlation-article">
+            <h2>相关产品</h2>
+            <ul>
+              {dede:arclist typeid='6' row='4' titlelen='50'}
+              <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+
+        <div class="content_box" >
+          <div class="evaluate"> 
+            <!----> 
+            <!--分页<div class="pages">  </div>--> 
+            <br />
+            <div class="comment">
+              <h4>请填写您的需求与联系方式，方便客服与您联系!</h4>
+              <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+                <input type="hidden" name="action" value="post" />
+                <input type="hidden" name="diyid" value="2" />
+                <input type="hidden" name="do" value="2" />
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                 
+				  <tr>
+                    <td width="75">需求产品：</td>
+                    <td><input name='dinggou' id='dinggou' type="text" class="text" value='{dede:field.title/}'/></td>
+                  </tr>
+				  <tr>
+                    <td width="75">您的姓名：</td>
+                    <td><input name='name' id='name' type="text" class="text" /></td>
+                  </tr>
+                  <tr>
+                    <td>联系方式：</td>
+                    <td><input name='tel' id='tel' type="text" class="text" /></td>
+                  </tr>
+                  <tr>
+                    <td>联系邮箱：</td>
+                    <td><input name='email' id='email' type="text" class="text" /></td>
+                  </tr>
+                  <tr>
+                    <td>所在区域：</td>
+                    <td><input name='qy' id='qy' type="text" class="text" /></td>
+                  </tr>
+                  <tr>
+                    <td>备注内容：</td>
+                    <td><textarea name='nr' id='nr' cols="" rows=""></textarea></td>
+                  </tr>
+				  
+				  <input name="tijiaoshijian" value="" type="hidden"  id="tijiaoshijian"  />
+
+      <script type="text/javascript">
+
+                    window.onload = function(){
+
+                    var nowDate = new Date();
+
+                    var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)
+
++"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()
+
++":"+nowDate.getSeconds();
+
+                    document.getElementById("tijiaoshijian").value=str;
+
+                    }
+
+                    </script><input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;qy,text;nr,text;dinggou,text;tijiaoshijian,text" />
+<input type="hidden" name="dede_fieldshash" value="7a30c92e6563949ce729e6fc78a499ab" />
+				  
+				  
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><input name="submit" type="submit" class="ok_btn" value="提交订单" />
+                      &nbsp;&nbsp;
+                      <input type="reset" name="reset" value="重新填写" class='ok_btn' /></td>
+                  </tr>
+                </table>
+               
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+    $(".show_content").viTab({
+        tabTime: 4000,
+        tabScroll: 0,
+        tabEvent: 0
+    });
+</script> 
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="nconl MTA">
+    <div class="prs" >
+      <h4 class="t05">{dede:field name='typeid' function="GetTopTypename(@me)" /}</h4>
+      <div class="t05_con">
+        <ul class="t05_uls">
+          {dede:channel type='son' row='10' currentstyle="
+          <li class='cur'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>
+          "}
+          <li><a href='[field:typeurl/]'><span>[field:typename/]</span></a></li>
+          {/dede:channel}
+        </ul>
+      </div>
+    </div>
+    {dede:include filename="left.htm"/} </div>
+</div>
+<div class="clear"> </div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

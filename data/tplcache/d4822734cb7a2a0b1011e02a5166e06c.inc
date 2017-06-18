@@ -1,0 +1,1 @@
+<li class="banner" style="background: url([field:litpic/]) no-repeat center scroll;"> </li>

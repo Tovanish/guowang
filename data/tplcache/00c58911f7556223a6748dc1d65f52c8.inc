@@ -1,0 +1,1 @@
+<a target="_blank" href="[field:typelink/]"> <img src="/skin/images/addshoping.jpg" width="132" height="50"/> </a>

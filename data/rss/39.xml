@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+<channel>
+<title>大图轮播</title>
+<link>http://localhost/datu/</link>
+<description>大图轮播</description>
+<language>zh-cn</language>
+<generator><![CDATA[Copyright &amp;copy; 西安宽坐商贸有限公司 版权所有 &lt;br /&gt;
+      电话：029-62969596 传真：029-61876900 邮箱：233079908@qq.com &lt;br /&gt;
+      地址：西安市雁塔区含光南路大明宫建材家居城]]></generator>
+<webmaster>desdev@vip.qq.com</webmaster>
+<item>
+    <title><![CDATA[大图二]]></title>
+    <link>http://localhost/plus/view.php?aid=62</link>
+    <description><![CDATA[]]></description>
+    <pubDate>2016-05-28</pubDate>
+    <category>大图轮播</category>
+    <author>admin</author>
+    <comments>未知</comments>
+</item>
+<item>
+    <title><![CDATA[大图一]]></title>
+    <link>http://localhost/plus/view.php?aid=61</link>
+    <description><![CDATA[]]></description>
+    <pubDate>2016-05-28</pubDate>
+    <category>大图轮播</category>
+    <author>admin</author>
+    <comments>未知</comments>
+</item>
+
+</channel>
+</rss>

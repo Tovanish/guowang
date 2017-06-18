@@ -1,0 +1,21 @@
+<div id="btn-dialogBox"></div>
+<link href="/tc/sm.css" rel="stylesheet" type="text/css" />
+<script src="/tc/jq.js"></script>
+<script src="/tc/sm.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(document).ready(function(){
+		$('#btn-dialogBox').dialogBox({
+			hasClose: true,
+			hasBtn: true,
+			confirmValue: '去买正版',
+			confirm: function(){
+				window.open("https://item.taobao.com/item.htm?id=522026975318")
+			},
+			cancelValue: '继续浏览',
+			title: '【7啪老店】正版购物提示',
+			content: '买源码，请认准【7啪老店】!!!!<br>欢迎您访问本店源码演示网站，<font style="color:red">为避免您买到盗版源码，问题太多且无售后服务</font>，<br/><b>是否打开正版源码购买页面？可享受优质服务和更多赠品</b>'
+		});
+	})
+})
+</script>

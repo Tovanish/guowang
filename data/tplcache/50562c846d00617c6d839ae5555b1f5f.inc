@@ -1,0 +1,1 @@
+<a class="cur" href="[field:typelink/]" id="chknew1" onmouseover="setTabNews('chknew',1,2);"> [field:typename/]<em>Industry News</em></a>

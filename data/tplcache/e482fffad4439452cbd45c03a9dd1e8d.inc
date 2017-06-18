@@ -1,0 +1,1 @@
+ <a href="[field:typeurl/]"  rel='dropmenu3'>[field:typename/]</a> 

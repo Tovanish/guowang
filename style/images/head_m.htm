@@ -1,0 +1,15 @@
+<header> <a class="fanhui" href="javascript:window.history.back();"></a> <strong>{dede:field name='typeid' function="GetTopTypename(@me)" /}</strong> <a href="#" class="menubtn"></a> 
+  <!-- use captain icon for toggle menu -->
+  <div id="hamburgermenu">
+    <ul>
+    <li><a href="/m">网站首页</a></li>
+      {dede:channel type='top' row='7'}
+    <li><a href='list.php?tid=[field:id/]'>[field:typename/]</a></li>
+    {/dede:channel}
+	
+	 <li><a href='http://www.kuanzuojiaju.com/a/zaixianliuyan/'>在线留言</a></li>
+	
+    </ul>
+  </div>
+  <div class="overlay"></div>
+</header>

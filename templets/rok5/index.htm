@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by dede58.com"/>
+<link href="/skin/css/css.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="/skin/js/jquery-1.8.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="/skin/js/index.js" ></script>
+<script type="text/javascript" src="/skin/js/photorollx.js"></script>
+</head>
+<body>
+<div id="header"> {dede:include filename="head.htm"/}
+  <div id="nav">
+    <div id="navMenu">
+      <ul>
+        <li  class='home'><a href="/">网站首页</a></li>
+       {dede:channel type='top' row='7' currentstyle="<li class='home'><a  href='~typelink~' ~rel~>~typename~</a></li>"}
+        <li><a href="[field:typelink/]"  rel='dropmenu'>[field:typename/]</a></li>
+       {/dede:channel}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div id="banner">
+  <ul class="ulBanner">
+  {dede:arclist  orderby='id' typeid='39' row=5}
+    <li class="banner" style="background: url([field:litpic/]) no-repeat center scroll;"> </li>
+    {/dede:arclist}
+  </ul>
+  <ul class="ulBannerNav">
+    <li class="on"></li>
+    <li></li>
+  </ul>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#banner").Slide({
+            effect: "fade",
+            speed: "normal",
+            timer: 3500,
+            autoPlay: true,
+            defIndex: 0,
+            claNav: "ulBannerNav",
+            claCon: "ulBanner",
+            steps: 1
+        });
+    });
+</script>
+<div class="clear"></div>
+<!--<div class="searchBg">
+  <div class="search container">
+    <div class="keyWord fl"><b>热门关键词：</b>
+      <ul>
+        {dede:hotwords num='4'/}
+      </ul>
+    </div>
+    <div class="searchBox fr">
+      <form action="/plus/search.php" name="formsearch">
+        <input type="hidden" name="kwtype" value="0" />
+        <input type="text"  name="q" class="soText"  value="请在这儿搜索..."  onfocus="if(this.value=='请在这儿搜索...'){this.value=''}"/>
+        <input class="soBtn" type="submit" name="submit" value="搜索"/>
+      </form>
+    </div>
+  </div>
+</div>-->
+
+<div class="cpbg">
+  <div class="cpbox container">
+    <div class="famu fl">
+    <h4> {dede:type typeid='6'} <a href="[field:typelink/]"> <img src="/skin/images/famutit.png" width="210" height="56" /></a>{/dede:type} </h4>
+    <ul>
+      {dede:channel type='son' row='10' typeid='6' currentstyle="
+      <li class='hover'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>
+      "}
+      <li><a href="[field:typeurl/]">+ [field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+    <div class="faphone"> 
+	<div class="wenzi">
+	
+精益求精，追求完美品质；<br>
+优质高效，引领绿色未来；<br>
+持续改进，超越顾客期望。
+	</div>
+	<span class="rexian">客服咨询热线</span>
+	<span class="tel">{dede:global.cfg_tel/}</span> 
+    <span class="lx"><a href="{dede:type typeid='36'}[field:typeurl/]{/dede:type}">联系我们</a></span> 
+	
+	</div>
+  </div>
+    <div class="cplist fr">
+      <h4 class="conttit"> {dede:type typeid='6'} <a class="tita" href="[field:typelink/]">新品推荐</a>{/dede:type} <span>New Products</span>{dede:type typeid='6'} <a class="titmore"
+      href="[field:typelink/]"><img src="/skin/images/titmore.png" /></a>{/dede:type} </h4>
+      <ul>
+        {dede:arclist typeid='6' row='9' titlelen='32' flag='c'}
+        <li class='nomr'><a href="[field:arcurl/]" title="[field:title/]"> <img alt="[field:title/]" src="[field:picname/]" width="230" height="176" /></a>
+          <h5> <a href="[field:arcurl/]" title="[field:title/]"> [field:title/]</a></h5>
+        </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <div class="clear"> </div>
+  </div>
+</div>
+<div class="box MB10">
+  <div class="box_c">
+    <div class="box_cl fl">
+      {dede:global.cfg_ada/}</div>
+    <div class="box_cr fr"><a href="tencent://message/?uin={dede:global.cfg_qq/}&Site=&Menu=yes" target="_blank">咨询客服人员</a></div>
+  </div>
+</div>
+
+<div style="width:1000px;margin-top:20px;">
+
+
+
+
+     <div class="about_t">
+      <div class="more">{dede:type typeid='16'} <a href="[field:typelink/]" target="_blank">+ 了解详情</a>{/dede:type} </div>
+      <div>
+			<h3>CASE</h3>
+        <h2>客户案例</h2>
+      </div>
+    </div>
+</div>
+<div class="jjfabox container">
+ 
+
+ 
+ 
+  <ul class="facont fr">
+    {dede:arclist typeid='16' row='6' titlelen='50'}
+    <li><a href="[field:arcurl/]" title="[field:title/]"> <img alt="[field:title/]" src="[field:picname/]" width="318" height="278" /></a>
+      <h5> <a href="[field:arcurl/]" title="[field:title/]"> [field:title/]</a></h5>
+    </li>
+    {/dede:arclist}
+  </ul>
+  <div class="clear"> </div>
+  
+  
+  <!--<div class="case">
+  <div class="poxt">
+    <h4>{dede:type typeid='15'} <a href="[field:typelink/]">[field:typename/]</a>{/dede:type} <span>Success stories</span></h4>
+  </div>
+  <div class="ibox7">
+    <div id="LeftArr1"></div>
+    <div class="ihonor" id="ISL_Cont_1">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> {dede:arclist typeid='15' row='20' titlelen='50'}
+          <td><a href="[field:arcurl/]"><img src="[field:picname/]" alt="[field:title/]" /></a></td>
+          {/dede:arclist} </tr>
+      </table>
+    </div>
+    <div id="RightArr1"></div>
+  </div>
+</div>-->
+<script language="javascript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+var scrollPic_03 = new ScrollPic();
+scrollPic_03.scrollContId   = "ISL_Cont_1"; //内容容器ID
+scrollPic_03.arrLeftId      = "LeftArr1";//左箭头ID
+scrollPic_03.arrRightId     = "RightArr1"; //右箭头ID
+scrollPic_03.frameWidth     = 896;//显示框宽度
+scrollPic_03.pageWidth      = 224; //翻页宽度
+scrollPic_03.speed          = 10; //移动速度(单位毫秒，越小越快)
+scrollPic_03.space          = 10; //每次移动像素(单位px，越大越快)
+scrollPic_03.autoPlay       = true; //自动播放
+scrollPic_03.autoPlayTime   = 3; //自动播放间隔时间(秒)
+scrollPic_03.initialize(); //初始化
+		//--><!]]>
+</script>
+  
+  
+  
+</div>
+
+
+
+
+
+
+
+<div class="hxysbg">
+  <div class="hxysbox container">
+    <div class="hxystit"> <span>我们的5大核心优势</span>
+      <p> 为新老客户提供创新的产品和优质的服务</p>
+    </div>
+    <ul>
+      <li>
+        <h5>自然环保</h5>
+        <p style="font-size:20px;margin-left:33px;margin-top:30px"> 严苛选料</br></br>确保健康</p>
+      </li>
+      <li>
+        <h5> 产品质量</h5>
+        <p style="font-size:20px;margin-left:33px;margin-top:30px"> 优质木源</br></br>标准生产</p>
+      </li>
+      <li>
+        <h5> 品类丰富</h5>
+        <p style="font-size:20px;margin-left:33px;margin-top:30px"> 百多款型</br></br>细分市场</p>
+      </li>
+      <li>
+        <h5> 安装工艺</h5>
+        <p style="font-size:20px;margin-left:33px;margin-top:30px"> 流程规范</br></br>注重细节</p>
+      </li>
+      <li>
+        <h5> 高性价比</h5>
+        <p style="font-size:20px;margin-left:33px;margin-top:30px"> 高端产品</br></br>中档价位</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="index_abt">
+  <div class="about">
+    <div class="about_t">
+      <div class="more">{dede:type typeid='1'} <a href="[field:typelink/]" target="_blank">+ 了解详情</a>{/dede:type} </div>
+      <div>
+        <h3>ABOUT US</h3>
+        <h2>关于我们</h2>
+      </div>
+    </div>
+    <div class="about_c">
+      <div class="about_cl fl"><img src="/skin/images/about.jpg" /></div>
+      <div class="about_cr fr">
+        <h3>品牌简介</h3>
+        <span>{dede:sql sql='Select content from dede_arctype where id=1'} 
+        [field:content  function='cn_substr(html2text(@me),660)'/]...
+        {/dede:sql}</span> {dede:type typeid='1'} <a href="[field:typelink/]" target="_blank">了解详情+</a>{/dede:type} </div>
+    </div>
+  </div>
+</div>
+<div class="dtspan container"> 
+  <!--动态-->
+  <div class="dtbox fl">
+    <h4> {dede:type typeid='18'} <a class="cur" href="[field:typelink/]" id="chknew1" onmouseover="setTabNews('chknew',1,2);"> [field:typename/]<em>Industry News</em></a>{/dede:type}  {dede:type typeid='19'} <a class="" href="[field:typelink/]" id="chknew2" onmouseover="setTabNews('chknew',2,2);"> [field:typename/]<em>Floor knowledge</em></a>{/dede:type} </h4>
+    <div id="con_chknew1" > {dede:arclist typeid='18' row='1' titlelen='50' infolen='300' flag='c'}
+      <dl>
+        <dt class="fl"><a href="[field:arcurl/]" title="[field:title/]"> <img alt="[field:title/]" src="[field:picname/]" width="212" height="150" /></a> </dt>
+        <dd>
+          <h5> <a href="[field:arcurl/]" title="[field:title/]"> [field:title/]</a></h5>
+          <p> [field:info/]...<a href="[field:arcurl/]" title="[field:title/]"> [详情]</a></p>
+        </dd>
+      </dl>
+      {/dede:arclist}
+      <ul>
+        {dede:arclist typeid='18' row='5' titlelen='50'  noflag='c'}
+        <li><a target="_blank" href="[field:typeurl/]" title="[field:title/]"> [field:title/]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <div id="con_chknew2" style='display: none;'> {dede:arclist typeid='19' row='1' titlelen='50' infolen='300' flag='c'}
+      <dl>
+        <dt class="fl"><a href="[field:arcurl/]" title="[field:title/]"> <img alt="[field:title/]" src="[field:picname/]" width="212" height="150" /></a> </dt>
+        <dd>
+          <h5> <a href="[field:arcurl/]" title="[field:title/]"> [field:title/]</a></h5>
+          <p> [field:info/]...<a href="[field:arcurl/]" title="[field:title/]"> [详情]</a></p>
+        </dd>
+      </dl>
+      {/dede:arclist}
+      <ul>
+        {dede:arclist typeid='19' row='5' titlelen='50'  noflag='c'}
+        <li><a target="_blank" href="[field:typeurl/]" title="[field:title/]"> [field:title/]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function setTabNews(name, cursel, n) {
+        for (i = 1; i <= n; i++) {
+            var menu = document.getElementById(name + i);
+            var con = document.getElementById("con_" + name + i);
+            if (i == cursel) {
+                menu.className = "cur";
+                con.style.display = "block";
+            } else {
+                menu.className = "";
+                con.style.display = "none";
+            }
+        }
+    }
+</script> 
+  <!-- cb_服务支持 -->
+  <div class="fwzc fr">
+    <h4 class="conttit"><a class="tita">服务支持</a><span>Support</span></h4>
+    <div class="fwimg"> <img src="/skin/images/fwzcoimg.png" width="232" height="76" /></div>
+    <div class="fwphone"> <span> {dede:global.cfg_tel/}</span></div>
+    <ul class="m_form" id="leavewordform">
+      <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="action" value="post" />
+        <input type="hidden" name="diyid" value="1" />
+        <input type="hidden" name="do" value="2" />
+        <li>
+          <label> <img src="/skin/images/form_ico01.png" /></label>
+          <input class="ipttxt" type="text" id="name" name='name' value="您的姓名" onblur="if(this.value==''){this.value='您的姓名'}" onfocus="if(this.value=='您的姓名'){this.value=''}" />
+        </li>
+        <li>
+          <label> <img src="/skin/images/form_ico02.png" /></label>
+          <input class="ipttxt" type="text" id="tel" name='tel' value="您的电话" onblur="if(this.value==''){this.value='您的电话'}" onfocus="if(this.value=='您的电话'){this.value=''}" />
+        </li>
+        <li>
+          <label> <img src="/skin/images/form_ico03.png" /></label>
+          <input class="ipttxt" type="text" id="email"  name='email' value="您的邮箱" onblur="if(this.value==''){this.value='您的邮箱'}" onfocus="if(this.value=='您的邮箱'){this.value=''}" />
+        </li>
+        <li class="areli">
+          <label> <img src="/skin/images/form_ico04.png" /></label>
+          <textarea class="txtare" id="nr" name='nr' onblur="if(this.value==''){this.value='您的留言'}" onfocus="if(this.value=='您的留言'){this.value=''}">您的留言</textarea>
+        </li>
+        <li>
+          <input class="btnsubmit" type="submit" name="submit" value="" />
+        </li>
+        <input name="tijiaoshijian" value="" type="hidden"  id="tijiaoshijian"  />
+
+      <script type="text/javascript">
+
+                    window.onload = function(){
+
+                    var nowDate = new Date();
+
+                    var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)
+
++"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()
+
++":"+nowDate.getSeconds();
+
+                    document.getElementById("tijiaoshijian").value=str;
+
+                    }
+
+                    </script><input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;nr,text;tijiaoshijian,text" />
+<input type="hidden" name="dede_fieldshash" value="28096bbe7c0b3558c1079d68bcdb3f58" />
+      </form>
+    </ul>
+  </div>
+  <div class="clear"> </div>
+</div>
+<div class="clear"></div>
+<!--<div class="yqljbg">
+  <div class="yqlj container">
+    <h4 class="conttit"> <a class="tita" href="tencent://message/?uin=329435596&Site=&Menu=yes" target="_blank">友情链接</a><span> links</span></h4>
+    <p>{dede:flink titlelen='20' row='20' type='text'}  [field:link /]  {/dede:flink} </p>
+  </div>
+</div>-->
+<div class="clear"> </div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

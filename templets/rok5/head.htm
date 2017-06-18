@@ -1,0 +1,38 @@
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?fc24e4c00a6ecb0304bd5819494b6f40";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript">
+if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+    if(window.location.href.indexOf("?mobile")<0){
+        try{
+            if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                window.location.href="/m";
+            }else if(/iPad/i.test(navigator.userAgent)){
+                window.location.href="/m";
+            }else{
+                window.location.href="/m"
+            }
+        }catch(e){}
+    }
+}
+</script>
+
+
+<div class="hd_cont container">
+  <dl class="hd_logo">
+    <dt class="fl"><a href="/"> <img src="/skin/images/logo.png" alt="{dede:global.cfg_webname/}" width="227" height="56"></a></dt>
+    <dd class="fl">
+      {dede:global.cfg_biaoyua/}
+    </dd>
+  </dl>
+  <dl class="dh_phone fr">
+    <dt>咨询热线</dt>
+    <dd>{dede:global.cfg_tel/}</dd>
+  </dl>
+</div>

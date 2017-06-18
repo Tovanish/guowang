@@ -1,0 +1,1 @@
+<a class="tita" href="[field:typelink/]">新品推荐</a>

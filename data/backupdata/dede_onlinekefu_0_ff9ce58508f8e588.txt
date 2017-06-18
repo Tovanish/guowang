@@ -1,0 +1,2 @@
+INSERT INTO `dede_onlinekefu` VALUES('1','张经理','1','83028644','1');
+INSERT INTO `dede_onlinekefu` VALUES('2','张经理','1','83028644','2');

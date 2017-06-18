@@ -1,0 +1,3 @@
+INSERT INTO `dede_flink` VALUES('10','1','http://www.fkzuzhi.cn','飞客网络','','','','1450239852','1','2');
+INSERT INTO `dede_flink` VALUES('12','1','http://fkmoban.taobao.com','淘宝网店','','','','1450239869','1','2');
+INSERT INTO `dede_flink` VALUES('11','1','http://www.fkmoban.com','FK模板中心','','','','1450239860','1','2');

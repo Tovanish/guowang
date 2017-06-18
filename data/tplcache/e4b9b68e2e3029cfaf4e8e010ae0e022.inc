@@ -1,0 +1,1 @@
+<a href="[field:typelink/]"> <img src="/skin/images/famutit.png" width="210" height="56" /></a>

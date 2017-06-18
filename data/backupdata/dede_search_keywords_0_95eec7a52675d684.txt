@@ -1,0 +1,4 @@
+INSERT INTO `dede_search_keywords` VALUES('2','家装建材','家装建材 家装 建材','6','0','1479619737','0','0');
+INSERT INTO `dede_search_keywords` VALUES('3','复合地板卷材','复合地板卷材 卷材 复合地板','1','0','1467559831','0','0');
+INSERT INTO `dede_search_keywords` VALUES('4','复合','复合','4','2','1484859892','0','0');
+INSERT INTO `dede_search_keywords` VALUES('5','商业','商业','3','1','1469946308','0','0');

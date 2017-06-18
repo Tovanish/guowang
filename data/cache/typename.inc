@@ -1,0 +1,31 @@
+<?php
+$typeArr[1] = '关于我们';
+$typeArr[2] = '公司简介';
+$typeArr[3] = '发展历程';
+$typeArr[4] = '企业文化';
+$typeArr[5] = '企业环境';
+$typeArr[6] = '产品展示';
+$typeArr[7] = '艺术手工独板系列';
+$typeArr[8] = '艺术尊贵独板系列';
+$typeArr[9] = '艺术雅致小独板';
+$typeArr[10] = '艺术奢华拼花系列';
+$typeArr[11] = '艺术典雅组合系列';
+$typeArr[12] = '艺术清新小直板系列';
+$typeArr[14] = '客户案例';
+$typeArr[15] = '合作伙伴';
+$typeArr[16] = '客户案例';
+$typeArr[17] = '新闻资讯';
+$typeArr[18] = '公司新闻';
+$typeArr[19] = '地板知识';
+$typeArr[21] = '售后服务';
+$typeArr[22] = '售后服务';
+$typeArr[23] = '关于配送';
+$typeArr[24] = '用户指南';
+$typeArr[26] = '在线商城';
+$typeArr[36] = '联系我们';
+$typeArr[37] = '联系方式';
+$typeArr[39] = '大图轮播';
+$typeArr[40] = '在线留言';
+$typeArr[41] = '高贵实木系列';
+$typeArr[42] = '合作伙伴备份';
+?>

@@ -1,0 +1,1 @@
+<a class="" href="[field:typelink/]" id="chknew2" onmouseover="setTabNews('chknew',2,2);"> [field:typename/]<em>Floor knowledge</em></a>

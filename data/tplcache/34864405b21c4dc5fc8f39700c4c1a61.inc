@@ -1,0 +1,1 @@
+<a href="[field:typelink/]" target="_blank">+ 了解详情</a>

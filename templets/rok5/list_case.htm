@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field name='typename'/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<script language="javascript" type="text/javascript" src="/skin/js/jquery-1.8.0.min.js"></script>
+<link href="/skin/css/css.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div id="header"> {dede:include filename="head.htm"/}
+   <div id="nav">
+    <div id="navMenu">
+      <ul>
+         <li><a href="/">网站首页</a></li>
+       {dede:channel type='top' row='7' currentstyle="<li class='home'><a  href='~typelink~' ~rel~>~typename~</a></li>"}
+        <li><a href="[field:typelink/]"  rel='dropmenu'>[field:typename/]</a></li>
+       {/dede:channel}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="list_article MB10"></div>
+<div class="ncon">
+  <div class="nconr">
+    <div class="weizhi">
+      <h2>{dede:field name='typename'/}</h2>
+      <h3>当前位置：{dede:field name='position'/}</h3>
+    </div>
+    <div class="list_1">
+      <ul>
+        {dede:list pagesize ='6'}
+        <li> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]" border="0" width="170" height="120"></a>
+          <h5><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h5>
+          <p>[field:description function="cn_substr(@me,300)"/]...<a href="[field:arcurl/]" title="[field:title/]">[详细]</a></p>
+        </li>
+        {/dede:list}
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <div  class="pagex">
+      <ul>
+        {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+      </ul>
+    </div>
+  </div>
+  <div class="nconl MTA">
+    <div class="prs" >
+      <h4 class="t05">{dede:field name='typeid' function="GetTopTypename(@me)" /}</h4>
+      <div class="t05_con">
+        <ul class="t05_uls">
+          {dede:channel type='son' row='10' currentstyle="
+          <li class='cur'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>
+          "}
+          <li><a href='[field:typeurl/]'><span>[field:typename/]</span></a></li>
+          {/dede:channel}
+        </ul>
+      </div>
+    </div>
+    {dede:include filename="left.htm"/} </div>
+</div>
+<div class="clear"> </div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>
